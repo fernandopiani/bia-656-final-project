@@ -1,0 +1,57 @@
+<html>
+<body>
+    <h3>AirBnB Rental Price Prediction</h3>
+    <p>
+      *Note: for Latitude, please only input values between
+        +37.705 and +37.828. For Longitude, please only input values
+        between -122.513 and -122.368.
+    </p>
+ 
+<div>
+  <form action="/result" method="POST">
+    <label for="latitude">Latitude</label>
+    <input type="text" id="latitude" name="latitude">
+    <br>
+    <label for="longitude">Longitude</label>
+    <input type="text" id="longitude" name="longitude">
+    <br>
+    <label for="property_type">Property Type</label>
+    <select id="property_type" name="property_type">
+      <option value="0">Aparthotel</option>
+      <option value="1">Apartment</option>
+      <option value="2">Bed and breakfast</option>
+      <option value="3">Boutique hotel</option>
+      <option value="4">Condominium</option>
+      <option value="5">Guest suite</option>
+      <option value="6">Guesthouse</option>
+      <option value="7">Hostel</option>
+      <option value="8">Hotel</option>
+      <option value="9">House</option>
+      <option value="10">Loft</option>
+      <option value="11">Other</option>
+      <option value="12">Serviced apartment</option>
+      <option value="13">Townhouse</option>
+    </select>
+    <br>
+    <label for="room_type">Room Type</label>
+    <select id="room_type" name="room_type">
+      <option value="0">Entire home/apt</option>
+      <option value="1">Private room</option>
+      <option value="2">Shared room</option>
+      <option value="3">Hotel room</option>
+    </select>
+    <br>
+    <label for="bathrooms">Bathrooms</label>
+    <input type="text" id="bathrooms" name="bathrooms">
+    <br>
+    <label for="longitude">Bedrooms</label>
+    <input type="text" id="bedrooms" name="bedrooms">
+    <br>
+    <label for="minimum_nights">Minimum Nights (max 30)</label>
+    <input type="text" id="minimum_nights" name="minimum_nights">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
