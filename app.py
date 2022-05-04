@@ -59,7 +59,7 @@ def translate(inputs):
 
 # Preprocessing function:
 def preprocess(input_df):
-
+    from app import ModelTransformer
     input_df['bedrooms'] = input_df['bedrooms'].astype('float')
     input_df['bathrooms'] = input_df['bathrooms'].astype('float')
     input_df['minimum_nights'] = input_df['minimum_nights'].astype('float')
