@@ -18,6 +18,10 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.base import TransformerMixin
 
+import __main__
+__main__.ModelTransformer = ModelTransformer
+
+
 # List translation function
 def translate(inputs):
 
