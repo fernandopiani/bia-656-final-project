@@ -17,20 +17,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.base import TransformerMixin
 
-# Massaging data
-
-class ModelTransformer(TransformerMixin):
-    def __init__(self, model):
-        self.model = model
-
-    def fit(self, *args, **kwargs):
-        self.model.fit(*args, **kwargs)
-        return self
-
-    def transform(self, X, **transform_params):
-        return pd.DataFrame(self.model.predict(X))
-
-
 # List translation function
 def translate(inputs):
 
@@ -60,7 +46,7 @@ def translate(inputs):
 # Preprocessing function:
 def preprocess(input_df):
 
-    custom_model = ModelTransformer(KMeans(n_clusters=6))
+    import model_transformer
 
     input_df['bedrooms'] = input_df['bedrooms'].astype('float')
     input_df['bathrooms'] = input_df['bathrooms'].astype('float')
