@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 from lightgbm import LGBMRegressor
 from flask import Flask, request, render_template
+from model_transformer import ModelTransformer
 
 # Sklearn imports
 from sklearn.cluster import KMeans
